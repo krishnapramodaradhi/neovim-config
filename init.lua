@@ -65,6 +65,16 @@ require('lspconfig').gopls.setup {
     capabilities = capabilities
 }
 
+require('lspconfig').tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+require('lspconfig').cssls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
 local cmp = require('cmp')
 require('luasnip.loaders.from_vscode').lazy_load()
 cmp.setup({
