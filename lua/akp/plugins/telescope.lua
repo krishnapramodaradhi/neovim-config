@@ -10,7 +10,7 @@ return {
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end)
         require('telescope').setup {
-            dependencies = {
+            defaults = {
                 file_ignore_patterns = { "node_modules" }
             }
         }
