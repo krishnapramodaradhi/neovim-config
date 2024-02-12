@@ -11,3 +11,9 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 
 vim.g.mapleader = " "
+
+vim.filetype.add({
+    extension = {
+        templ = 'templ'
+    }
+})

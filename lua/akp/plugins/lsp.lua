@@ -61,6 +61,15 @@ return {
             capabilities = capabilities
         }
 
+        require('lspconfig').templ.setup {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            cmd = { 'templ', 'lsp' },
+            filetypes = { 'templ' },
+            root_dir = util.root_pattern('go.work', 'go.mod', '.git')
+        }
+
+
         require('lspconfig').cssls.setup {
             on_attach = on_attach,
             capabilities = capabilities
